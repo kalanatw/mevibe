@@ -1,0 +1,139 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+#ai-engineering {
+  background: $color-bg;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-border, transparent);
+  }
+}
+
+.ai__inner {
+  @include section-container;
+  padding: $section-padding-y $container-padding;
+}
+
+.ai__header {
+  margin-bottom: 1rem;
+}
+
+.ai__subtext {
+  font-size: 1rem;
+  color: $color-text-secondary;
+  max-width: 580px;
+  line-height: 1.7;
+  margin-bottom: 3.5rem;
+}
+
+.ai__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ai-card {
+  @include glass-card;
+  padding: 2rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &:hover {
+    border-color: rgba($color-accent-cyan, 0.15);
+    box-shadow: 0 0 40px rgba($color-accent-cyan, 0.04);
+
+    .ai-card__diagram path,
+    .ai-card__diagram circle,
+    .ai-card__diagram rect,
+    .ai-card__diagram line {
+      stroke: rgba($color-accent-cyan, 0.6);
+    }
+  }
+}
+
+.ai-card__diagram {
+  height: 120px;
+  width: 100%;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  path, circle, rect, line, polyline {
+    transition: stroke 0.3s;
+  }
+}
+
+.ai-card__number {
+  font-family: $font-mono;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: $color-accent-cyan;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.ai-card__title {
+  font-family: $font-display;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $color-text-primary;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.ai-card__desc {
+  font-size: 0.88rem;
+  color: $color-text-secondary;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.ai__philosophy {
+  margin-top: 4rem;
+  padding: 2.5rem;
+  @include glass-card;
+  border-color: rgba($color-accent-gold, 0.15);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+
+  @include respond-to('md') {
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+  }
+}
+
+.ai__philosophy-text {
+  font-family: $font-display;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  color: $color-text-primary;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.ai__philosophy-author {
+  font-family: $font-mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-accent-gold;
+  white-space: nowrap;
+}

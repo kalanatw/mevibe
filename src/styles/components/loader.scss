@@ -1,0 +1,62 @@
+@use '../variables' as *;
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: $color-bg;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &.hidden {
+    pointer-events: none;
+  }
+}
+
+.loader__monogram {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 3rem;
+
+  path {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+  }
+}
+
+.loader__label {
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+
+.loader__progress-track {
+  width: 200px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.loader__progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, $color-accent-cyan, $color-accent-gold);
+  border-radius: 1px;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+
+.loader__curtain {
+  position: absolute;
+  inset: 0;
+  background: $color-bg;
+  transform-origin: top;
+}

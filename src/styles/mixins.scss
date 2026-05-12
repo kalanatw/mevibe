@@ -1,0 +1,55 @@
+@use 'variables' as *;
+
+@mixin respond-to($bp) {
+  @if $bp == 'sm'  { @media (min-width: #{$bp-sm})  { @content; } }
+  @if $bp == 'md'  { @media (min-width: #{$bp-md})  { @content; } }
+  @if $bp == 'lg'  { @media (min-width: #{$bp-lg})  { @content; } }
+  @if $bp == 'xl'  { @media (min-width: #{$bp-xl})  { @content; } }
+}
+
+@mixin glass-card {
+  background: $color-bg-card;
+  backdrop-filter: $blur-glass;
+  -webkit-backdrop-filter: $blur-glass;
+  border: 1px solid $color-border;
+  border-radius: 16px;
+
+  @supports not (backdrop-filter: blur(1px)) {
+    background: rgba(15, 15, 23, 0.95);
+  }
+}
+
+@mixin glow-border($color: $color-accent-cyan) {
+  border-color: rgba($color, 0.4);
+  box-shadow: 0 0 20px rgba($color, 0.15), inset 0 0 20px rgba($color, 0.05);
+}
+
+@mixin section-container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+@mixin gradient-text($from: $color-accent-cyan, $to: $color-accent-gold) {
+  background: linear-gradient(135deg, $from 0%, $to 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin section-label {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $color-accent-cyan;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@mixin clamp-lines($n) {
+  display: -webkit-box;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

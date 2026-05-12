@@ -1,0 +1,32 @@
+There was once a boy from the crowded streets of Colombo who looked at the world differently. While others saw limits, he saw systems waiting to be rebuilt. He was not born into perfect conditions, nor did he have endless advantages. But he carried something more dangerous than comfort — obsession.
+
+As a child, he was fascinated by how things worked. Phones, computers, websites, machines, businesses — he wanted to understand the invisible architecture behind everything. School taught him theory, but he learned most of his lessons by breaking things, rebuilding them, and staying awake late into the night trying again after failure.
+
+People around him thought he was quiet sometimes. But inside his mind, entire worlds were running in parallel. One moment he was imagining futuristic AI systems. Another moment he was planning businesses that could scale across continents. He dreamed beyond survival. He dreamed of impact.
+
+While many chased shortcuts, he became addicted to learning by doing.
+
+He built systems nobody asked him to build. Chatbots. AI agents. Voice applications. Smart dashboards. Business platforms. Architectural ideas. Multi-agent systems. He moved between technologies like a composer conducting instruments — React, FastAPI, Django, OpenAI APIs, vector databases, real-time systems. To outsiders it looked chaotic. To him, it was creation.
+
+But the hardest battles were never technical.
+
+There were days where progress felt invisible. Days where money was uncertain. Days where self-doubt became louder than ambition. He watched people with less talent move faster because they had better opportunities, connections, or confidence. Yet every setback hardened his mindset instead of breaking it.
+
+He realized something important:
+the people who change the world are rarely the ones with the smoothest path.
+They are the ones who refuse to stop building.
+
+Over time, his vision became clearer. He no longer wanted to just write code. He wanted to architect ecosystems. Systems that businesses depended on. AI that amplified human ability. Platforms that solved real-world inefficiencies. Technology that felt alive.
+
+And beneath all the ambition, he carried another belief quietly:
+success without kindness was empty.
+
+So even while chasing greatness, he tried to stay human. He respected people. Helped others learn. Shared ideas freely. Loved deeply. Stayed loyal to the people who stood beside him when he had nothing except dreams and unfinished prototypes.
+
+Years later, when people spoke about him, they did not describe him as just another developer from Sri Lanka.
+
+They described him as the architect who turned imagination into infrastructure.
+
+The man who could see the future before others recognized it.
+
+The dreamer who built relentlessly until the world had no choice but to notice.

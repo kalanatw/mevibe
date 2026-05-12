@@ -1,0 +1,227 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+#about {
+  background: $color-bg;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-border, transparent);
+  }
+}
+
+.about__inner {
+  @include section-container;
+  padding: $section-padding-y $container-padding;
+  position: relative;
+}
+
+.about__bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $font-display;
+  font-size: clamp(6rem, 18vw, 20rem);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.025);
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.about__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+
+  @include respond-to('lg') {
+    grid-template-columns: 380px 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+
+.about__portrait {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+
+  @include respond-to('lg') {
+    max-width: 380px;
+    margin: 0;
+  }
+}
+
+.about__portrait-frame {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 20px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(15%) contrast(1.05);
+    transition: filter 0.4s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    border: 1px solid rgba($color-accent-cyan, 0.2);
+    box-shadow: 0 0 40px rgba($color-accent-cyan, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover img {
+    filter: grayscale(0%) contrast(1.05);
+  }
+}
+
+.about__portrait-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba($color-accent-cyan, 0.08) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.about__portrait-tag {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  @include glass-card;
+  padding: 0.75rem 1.25rem;
+  border-color: rgba($color-accent-cyan, 0.2);
+
+  .tag-label {
+    font-family: $font-mono;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .tag-value {
+    font-family: $font-display;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $color-accent-cyan;
+  }
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about__header {
+  margin-bottom: 2rem;
+}
+
+.about__heading {
+  font-family: $font-display;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: $color-text-primary;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.about__paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.about__p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $color-text-secondary;
+
+  em {
+    color: $color-text-primary;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+.about__quote {
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-left: 2px solid $color-accent-gold;
+  background: linear-gradient(90deg, rgba($color-accent-gold, 0.05), transparent);
+  border-radius: 0 12px 12px 0;
+  margin-top: 0.5rem;
+
+  p {
+    font-family: $font-display;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: $color-accent-gold;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .quote-glow {
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $color-accent-gold;
+    box-shadow: 0 0 20px rgba($color-accent-gold, 0.6);
+  }
+}
+
+.about__stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $color-border;
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat__number {
+  font-family: $font-display;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: $color-text-primary;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.stat__label {
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "kalana-portfolio",
+  "version": "1.0.0",
+  "homepage": "https://kalanatw.github.io/mevibe",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "typescript": "^5.5.0",
+    "sass": "^1.77.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

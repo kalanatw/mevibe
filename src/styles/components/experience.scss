@@ -1,0 +1,230 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+#experience {
+  background: $color-bg-elevated;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-border, transparent);
+  }
+}
+
+.experience__inner {
+  @include section-container;
+  padding: $section-padding-y $container-padding;
+}
+
+.experience__header {
+  margin-bottom: 4rem;
+}
+
+.experience__timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline__track {
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.04);
+  transform-origin: top;
+
+  @include respond-to('md') {
+    left: 160px;
+  }
+}
+
+.timeline__line-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient($color-accent-cyan, rgba($color-accent-cyan, 0.2));
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 4rem;
+
+  @include respond-to('md') {
+    padding-left: 220px;
+    padding-bottom: 4.5rem;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.timeline__dot {
+  position: absolute;
+  left: -5px;
+  top: 0.6rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: $color-accent-cyan;
+  border: 2px solid $color-bg-elevated;
+  box-shadow: 0 0 12px rgba($color-accent-cyan, 0.5);
+  z-index: 1;
+
+  @include respond-to('md') {
+    left: calc(160px - 5px);
+  }
+
+  &--current {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1px solid rgba($color-accent-cyan, 0.4);
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+  }
+}
+
+.timeline__meta {
+  position: absolute;
+  left: 2.5rem;
+  top: 0;
+
+  @include respond-to('md') {
+    left: 0;
+    text-align: right;
+    width: 140px;
+  }
+}
+
+.timeline__period {
+  font-family: $font-mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: $color-text-muted;
+  display: block;
+  white-space: nowrap;
+}
+
+.timeline__card {
+  @include glass-card;
+  padding: 2rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    border-color: rgba($color-accent-cyan, 0.15);
+    box-shadow: 0 0 40px rgba($color-accent-cyan, 0.05);
+  }
+}
+
+.timeline__company-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timeline__company {
+  font-family: $font-display;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $color-text-primary;
+  letter-spacing: -0.01em;
+}
+
+.timeline__current-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.7rem;
+  background: rgba($color-accent-cyan, 0.1);
+  border: 1px solid rgba($color-accent-cyan, 0.25);
+  border-radius: 50px;
+  font-family: $font-mono;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-accent-cyan;
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $color-accent-cyan;
+    animation: pulseDot 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+}
+
+.timeline__role {
+  font-family: $font-display;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $color-accent-cyan;
+  margin-bottom: 1.25rem;
+}
+
+.timeline__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline__highlight {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  color: $color-text-secondary;
+  line-height: 1.6;
+
+  &::before {
+    content: '▸';
+    color: $color-accent-cyan;
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+    opacity: 0.7;
+  }
+}
+
+.timeline__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  padding: 0.3rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid $color-border;
+  border-radius: 50px;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: $color-text-muted;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: rgba($color-accent-cyan, 0.3);
+    color: $color-accent-cyan;
+    background: rgba($color-accent-cyan, 0.05);
+  }
+}

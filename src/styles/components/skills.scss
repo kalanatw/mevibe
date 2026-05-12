@@ -1,0 +1,169 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+#skills {
+  background: $color-bg-elevated;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-border, transparent);
+  }
+}
+
+.skills__inner {
+  @include section-container;
+  padding: $section-padding-y $container-padding;
+}
+
+.skills__header {
+  margin-bottom: 3.5rem;
+}
+
+.skills__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+
+  @include respond-to('lg') {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+}
+
+// Orbital Canvas
+.skills__orbital-wrap {
+  display: none;
+  position: relative;
+  aspect-ratio: 1;
+
+  @include respond-to('lg') {
+    display: block;
+  }
+}
+
+#skills-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.skills__orbital-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+
+  .center-label {
+    font-family: $font-mono;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .center-value {
+    font-family: $font-display;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $color-accent-cyan;
+  }
+}
+
+// Skill Bars
+.skills__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skill-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-bar__name {
+  font-family: $font-display;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $color-text-primary;
+}
+
+.skill-bar__percent {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $color-text-muted;
+}
+
+.skill-bar__track {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  width: 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, $color-accent-cyan, $color-accent-gold);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+  transition: width 1.2s $ease-out-expo;
+}
+
+// Tech grid at bottom
+.skills__tech-cloud {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid $color-border;
+}
+
+.skills__tech-label {
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.skills__tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skills__tech-tag {
+  padding: 0.4rem 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $color-text-muted;
+  transition: all 0.25s;
+  cursor: default;
+
+  &:hover {
+    border-color: rgba($color-accent-cyan, 0.35);
+    color: $color-accent-cyan;
+    background: rgba($color-accent-cyan, 0.04);
+  }
+}

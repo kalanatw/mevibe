@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+body {
+  font-family: $font-body;
+  font-size: 1rem;
+  color: $color-text-primary;
+  background-color: $color-bg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.display {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+.h2 { font-size: clamp(1.75rem, 3vw, 2.75rem); }
+.h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+
+p {
+  line-height: 1.75;
+  color: $color-text-secondary;
+}
+
+.mono {
+  font-family: $font-mono;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, $color-accent-cyan 0%, $color-accent-gold 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

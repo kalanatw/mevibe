@@ -1,0 +1,13 @@
+@use '../variables' as *;
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.section-inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: $section-padding-y $container-padding;
+}

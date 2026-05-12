@@ -1,0 +1,228 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+#contact {
+  background: $color-bg-elevated;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-border, transparent);
+  }
+}
+
+.contact__inner {
+  @include section-container;
+  padding: $section-padding-y $container-padding;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: start;
+
+  @include respond-to('lg') {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.contact__left {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact__header {
+  margin-bottom: 1.5rem;
+}
+
+.contact__subtext {
+  font-size: 1rem;
+  color: $color-text-secondary;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 420px;
+}
+
+.contact__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  @include glass-card;
+  border-radius: 12px;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: rgba($color-accent-cyan, 0.25);
+    background: rgba($color-accent-cyan, 0.04);
+
+    .social-link__arrow {
+      transform: translate(4px, -4px);
+    }
+  }
+}
+
+.social-link__icon {
+  width: 36px;
+  height: 36px;
+  background: rgba($color-accent-cyan, 0.08);
+  border: 1px solid rgba($color-accent-cyan, 0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    stroke: $color-accent-cyan;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.social-link__info {
+  flex: 1;
+}
+
+.social-link__platform {
+  font-family: $font-mono;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.social-link__handle {
+  font-family: $font-display;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $color-text-primary;
+}
+
+.social-link__arrow {
+  color: $color-text-muted;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+// Form
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  font-family: $font-body;
+  font-size: 0.95rem;
+  color: $color-text-primary;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+
+  &:focus {
+    border-color: rgba($color-accent-cyan, 0.4);
+    box-shadow: 0 0 0 3px rgba($color-accent-cyan, 0.07);
+    background: rgba($color-accent-cyan, 0.02);
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 2.25rem;
+  background: $color-accent-cyan;
+  color: $color-bg;
+  border: none;
+  border-radius: 50px;
+  font-family: $font-display;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s;
+  align-self: flex-start;
+  will-change: transform;
+
+  &:hover {
+    background: transparent;
+    color: $color-accent-cyan;
+    box-shadow: $glow-cyan;
+    border: 1px solid $color-accent-cyan;
+    padding: calc(1rem - 1px) calc(2.25rem - 1px);
+  }
+
+  svg {
+    transition: transform 0.2s;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+.form-success {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba($color-accent-green, 0.08);
+  border: 1px solid rgba($color-accent-green, 0.2);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: $color-accent-green;
+  font-family: $font-display;
+
+  &.visible {
+    display: flex;
+  }
+}

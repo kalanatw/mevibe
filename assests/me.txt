@@ -1,0 +1,53 @@
+Executive Summery I'm a software engineer with a strong focus on AI-powered applications, full-stack development, and cloud-native systems. I build scalable, intelligent solutions that solve real-world problems, and I thrive in both team-driven and independent environments. With a hands-on mindset and a passion for innovation, I'm always learning and pushing boundaries in software and AI development.
+
+Skills
+
+● Python | Java | Node.js | Spring | C | React | HTML | CSS | SCSS | ANTD | Bootstrap ● Apache Nifi | Apache Kafka | NGINX | Agentic AI | RAG Solutions | Voice Bots | Docker ● Amazon AWS | TurnServer | Virtual Reality | Augmented Reality | Ionic |ReactNative ● GitHub | BitBucket | Git | PostgreSQL | MongoDB | MySQL
+
+Professional Experience
+
+H2O.ai (August 2025 to Date) 
+Machine Learning Engineer 
+OpenWebUI X H2OGPTE: Engineered an integration layer connecting OpenWebUI with H2OGPTE, enabling document ingestion, RAG workflows, and multimodal outputs with traceable references. 
+Marketing Insight Agent: Developed and engineered a marketing analytics platform using FastAPI, React, H2O Wave, Driverless AI, tabular models, emerging tabular AI, customer lifetime value (CLV), churn prediction, customer segmentation, segment-level analytics, customer recommendations, LLM-based email generation, predictive analytics, business intelligence, data visualization, scalable analytics platform. 
+
+Predictive AI Agent Platform: Built a multi-agent system using LangGraph to orchestrate machine learning workflows. The platform enables data scientists to train models via Driverless AI, deploy them through H2O MLOps, and consume real-time predictions via a conversational chatbot interface. Designed this as an abstraction layer over the H2O ecosystem, simplifying ML lifecycle management and improving accessibility for nontechnical stakeholders. ● ● ● 
+
+Ownership & Product Delivery: Acted as the go-to engineer for owned systems, taking full responsibility from design to production. Worked independently and with crossfunctional teams to deliver MVPs that evolved into production-ready solutions, contributing directly to customer adoption and business growth. ● 
+
+Transaction Monitoring Agent: Developed and engineered a transaction monitoring platform using H2O Wave and Driverless AI for fraud detection, anomaly detection, and real-time risk scoring.Enabled transaction filtering, fraud rate analysis, LLM-based summarization, and visualization dashboards for actionable insights and preventive recommendations.
+
+
+
+Cove Island (July 2024 to August 2025) 
+Python Engineer ●
+
+NVIDIA Omniverse Development: Built advanced physics-based character controllers to ensure realistic movement and collision handling. Led the development of intelligent chatbot integrations within Omniverse, staying ahead of the curve through proactive research and experimentation. ● 
+
+AI & LLM Integration: Developed AI-powered chatbot systems using OpenAI, LangChain, and custom frontend/backend stacks with Django, FastAPI, and PostgreSQL. Deployed and maintained these systems on Linux environments ● 
+
+Data Engineering: Designed and implemented real-time document ingestion pipelines using Apache NiFi and Apache Kafka to enable live data processing and analytics. ● 
+
+Local LLM Deployment: Gained hands-on experience with self-hosted large language models like Qwen and Colpali as cost-effective alternatives to OpenAI. Deployed and fine-tuned these models in secure AWS environments. ● 
+
+VR/AR Development: Built immersive applications for Oculus Quest using the NVIDIA Omniverse platform and the CloudXR framework, enabling high-fidelity rendering in extended reality environments. ● 
+
+DevOps & Infrastructure: Worked with Docker, NGINX, TURN servers, and AWS to build, deploy, and maintain scalable, production-grade systems. ● 
+
+Collaboration & Delivery: Actively participated in team collaboration, knowledge sharing, and mentorship. Took initiative in breaking down complex tasks, enabling team success. Delivered MVPs under tight deadlines to support business growth and onboard new clients across the U.S.
+
+Education
+
+University of Moratuwa | B.Sc. (Hons) in Information Technology and Management (CGPA: 3.4) DeepLearning.AI & Stanford University Advanced Learning Algorithms | Supervised Machine Learning: Regression and Classification Esoft Metro Campus | Diploma in IT | Diploma in PC Hardware Engineering & Networking Institute of Software Engineering | Comprehensive Master Java Developer (CMJD) Royal College Colombo 7 | G.C.E. A/L (2018) Business Statistics - A | Accounting - A | Economics - A | Z-Score: 1.83 Taxila Central College | G.C.E. O/L (2015) Achieved A grades in 8 out of 9 subjects, with a B in the remaining subject.
+
+Projects
+
+Verticle AI Agents Development Developed full-stack chatbot applications using Retrieval-Augmented Generation (RAG) and agentic frameworks, enabling bots to call external tools and services during conversations. Applied prompt engineering techniques to ensure accurate, concise responses throughout multi-turn interactions. Built voice bots supporting real-time communication by integrating OpenAI’s Whisper API for speech-to-text and selfhosted text-to-speech models like Kokoro from Hugging Face, deployed in-house for low-latency performance. Handled deployment across environments, from local development to production systems running on AWS EC2, ensuring smooth operation, reliability, and scalability. Technologies: Agentic AI ● RAG ● OpenAI ● CrewAI ● Django ● FastAPI ● Hugging Face● React
+
+Omniverse Development & AI Integration Development of advanced features within NVIDIA Omniverse, beginning with integrating one of the platform’s first real-time chatbots, complete with a custom UI for seamless virtual interaction. I worked on dynamic object placement in digital twin environments by integrating Apache Kafka and Cesium, enabling HTTP-based updates and real-time automation. My work extended into immersive technology, where I developed Virtual Reality solutions using NVIDIA’s CloudXR SDK and built a mobile VR application for Oculus Quest to visualise digital twins. I also enabled low-latency web streaming of Omniverse sessions using TURN servers on AWS EC2, providing high-quality remote access. Additionally, I implemented real-time collaboration through NVIDIA Nucleus servers, allowing multiple users to co-author scenes, and developed physics-enabled character controllers to enhance realism and interactivity within 3D simulations. Technologies: Python ● Apache NiFi ● AWS ● Nginx ● Java ● NodeJs ● React ● Django
+
+Chatbot Development Developed full-stack chatbot applications using Retrieval-Augmented Generation (RAG) and agentic frameworks, enabling bots to call external tools and services during conversations. Applied prompt engineering techniques to ensure accurate, concise responses throughout multi-turn interactions. Built voice bots supporting real-time communication by integrating OpenAI’s Whisper API for speech-to-text and selfhosted text-to-speech models like Kokoro from Hugging Face, deployed in-house for low-latency performance. Handled deployment across environments, from local development to production systems running on AWS EC2, ensuring smooth operation, reliability, and scalability. Technologies: Agentic AI ● RAG ● OpenAI ● CrewAI ● Django ● FastAPI ● Hugging Face● React
+
+Automated Whale Identification System (AWIS) Developed a machine learning-based whale classification system using computer vision, achieving over 95% accuracy in identifying whale species. Trained a VGG16 model on a custom dataset of pilot whales, leveraging deep learning techniques for high-precision classification. Integrated the model into a seamless user interface that allows users to upload whale images and receive species predictions with over 95% confidence. Integrated the model into a Flask API for real-time inference and deployed it for scalable, production-grade usage. Technologies: Machine Learning ● Deep Learning ● Keras ● TensorFlow ● Flask ● Kaggle ● Hugging Face
+
+Sports | ● Surfing ● Cricket ● Adrinaline Games ● Badminton Hobbies | ● Reading ● Movies ● Music

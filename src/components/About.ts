@@ -30,7 +30,7 @@ export class About {
           <div class="about__portrait">
             <div class="about__portrait-glow"></div>
             <div class="about__portrait-frame">
-              <img src="/profile.jpg" alt="Kalana" loading="lazy" />
+              <img src="${import.meta.env.BASE_URL}profile.jpg" alt="Kalana" loading="lazy" />
             </div>
             <div class="about__portrait-tag">
               <span class="tag-label">Based in</span>
